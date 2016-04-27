@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,8 +10,8 @@
     <title>{% block title %} Dong Blog {% endblock %}</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
-    <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
-    <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
+    <link rel="stylesheet" href="{% static "blog.css" %}">
+    <link rel="stylesheet" href="{% static "monokai.css" %}">
 </head>
 <body>
 <div id="layout" class="pure-g">
@@ -24,7 +26,7 @@
                         <a class="button-success pure-button" href="/" style="font-size:16px;color:#FFA042;font-family:'sans-serif';">主页</a>
                     </li>
                     <li class="nav-item">
-                        <a class="button-success pure-button" href="http://127.0.0.1:8000/archives" style="font-size:16px;color:#FFA042;font-family:'sans-serif';">归档</a>
+                        <a class="button-success pure-button" href="http://127.0.0.1:8000/archives" style="font-size:16px;color:#FFA042;font-family:'sans-serif';">所有文章</a>
                     </li>
                     <li class="nav-item">
                         <a class="button-success pure-button" href="{% url 'about_me' %}" style="font-size:16px;color:#FFA042;font-family:'sans-serif';">About Me</a>
