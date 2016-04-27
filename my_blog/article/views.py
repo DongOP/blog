@@ -22,6 +22,7 @@ def home(request):
 		post_list = paginator.paginator(paginator.num_pages)
 	return render_to_response('home.html', {'post_list': post_list})
 
+#文章详情
 def detail(request, id):
 	try:
 		post = Article.objects.get(id=str(id))
@@ -29,6 +30,7 @@ def detail(request, id):
 		raise Http404
 	return render_to_response('post.html', {'post': post})
 
+#归档（所有文章）
 def archives(request):
 	try:
 		post_list = Article.objects.all()
