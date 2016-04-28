@@ -61,6 +61,9 @@ h3 {
     zoom: 1;
 }
 .nav-item a {
+    display:white;
+    width:100px;
+    height:40px;
     background: transparent;
     border: 2px solid rgb(176, 202, 219);
     color: #fff;
