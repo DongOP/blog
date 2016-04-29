@@ -9,7 +9,7 @@
                 <h2 class="post-title"><a href="{% url "detail" id=post.id %}">{{ post.title }}</a></h2>
 
                     <p class="post-meta">
-                        更新时间: <a class="post-author" href="#">{{ post.date_time |date:"Y M d"}}</a> <a class="post-category post-category-js" href="{% url "search_tag" tag=post.category %}">{{ post.category|title }}</a>
+                        更新日期: <a class="post-author" href="#">{{ post.date_time |date:"Y M d"}}</a> <a class="post-category post-category-js" href="{% url "search_tag" tag=post.category %}">{{ post.category|title }}</a>
                     </p>
             </header>
 
@@ -21,5 +21,5 @@
                 <a class="pure-button" href="{% url "detail" id=post.id %}" style="color:RoyalBlue">显示全部 ></a>
         </section>
     {% endfor %}
-</div><!-- /.blog-post -->
+</div><!-- /.blog-post 分类界面-->
 {% endblock %}

@@ -8,9 +8,13 @@
 <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
 
     <title>{% block title %} Dong Blog {% endblock %}</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <!-- pure CSS -->
+    <link rel="stylesheet" href="{% static "pure-min.css" %}">
+    <link rel="stylesheet" href="{% static "responsive-min.css" %}">
+
+    <!-- blog CSS -->
     <link rel="stylesheet" href="{% static "blog.css" %}">
+    <!-- markdown CSS -->
     <link rel="stylesheet" href="{% static "monokai.css" %}">
 </head>
 <body>
